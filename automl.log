@@ -1,0 +1,16 @@
+2021-04-18 22:10:19.638 - INFO - 19692 - azureml.train.automl._local_managed_utils.is_docker_installed:354 - Docker is installed with Docker version 20.10.5+azure, build 55c4c88966a912ddb365e2d73a4969e700fc458f
+.
+2021-04-18 22:10:19.639 - INFO - 19692 - azureml.train.automl.automlconfig._start_execution:217 - Submitting remote.
+2021-04-18 22:11:52.378 - INFO - 19692 - azureml.train.automl._local_managed_utils.is_docker_installed:354 - Docker is installed with Docker version 20.10.5+azure, build 55c4c88966a912ddb365e2d73a4969e700fc458f
+.
+2021-04-18 22:11:52.401 - INFO - 19692 - azureml.train.automl.automlconfig._start_execution:217 - Submitting remote.
+2021-04-18 22:52:04.096 - INFO - 19692 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2021-04-18 22:52:04.159 - INFO - 19692 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2021-04-18 22:52:04.178 - INFO - 19692 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2021-04-18 22:52:04.330 - INFO - 19692 - azureml.train.automl.run._log_activity:93 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=151.74[ms]
+2021-04-18 22:52:04.395 - INFO - 19692 - azureml.train.automl.run._log_activity:93 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=235.94[ms]
+2021-04-18 22:52:04.400 - INFO - 19692 - azureml.train.automl._model_download_utilities._log_activity:55 - ActivityStarted: DownloadModel
+2021-04-18 22:52:15.105 - INFO - 19692 - azureml.automl.runtime.featurization.data_transformer.__init__:173 - Feature sweeping enabled: False
+2021-04-18 22:52:15.115 - INFO - 19692 - azureml.automl.runtime.featurization.data_transformer.__init__:174 - Feature sweeping timeout: 86400
+2021-04-18 22:52:17.718 - INFO - 19692 - azureml.train.automl._model_download_utilities._log_activity:93 - ActivityCompleted: Activity=DownloadModel, HowEnded=Success, Duration=13317.82[ms]
+2021-04-18 22:52:17.753 - INFO - 19692 - azureml.train.automl.run._log_activity:93 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=13656.28[ms]
