@@ -178,7 +178,7 @@ In this file I have specified the dataset url which I have stored it on my githu
   
   
   ## Model deployment 
-  Here one may feel that the HyperDriveConfig has performed better than the AutoML but here is something we need to consider as we look at Regularization factor, it is 0.89 which indicates that the cost function is high for this alogorithm. Meaning although it may have given better accuracy on this dataset but it's going to fail on similar data. The maximum number of iterations indicate that the model is over-fitted. So, to come to conclusion here *VotingEnsemble* is the optimal and best algorithm. Voting Ensemble combines more than one algorithm for prediction and predicts using voting count which it has low-variance to the dataset
+  Here one may feel that the HyperDriveConfig has performed better than the AutoML but here is something we need to consider as we look at Regularization factor, it is 0.89 which indicates that the cost function is high for this alogorithm. Meaning although it may have given better accuracy on this dataset but it's going to fail on similar data. The maximum number of iterations indicate that the model is over-fitted. So, to come to conclusion here *VotingEnsemble* is the optimal and best algorithm. Voting Ensemble combines more than one algorithm for prediction and predicts using voting count which indiactes it has low-variance to the dataset
   
   ## Deploy model
   
@@ -204,8 +204,88 @@ best_run.download_file('outputs/scoring_file_v_1_0_0.py', 'score.py')
 
 # Download environment file
 best_run.download_file('outputs/conda_env_v_1_0_0.yml', 'env.yml')
+d 
+```
+Now we are going to pass these files to *InferenceConfig* where it is going all the credentials required to deploy the model on the cloud and Finally deploy it using *AciWebservice*
 
 ```
+inference_config = InferenceConfig(entry_script = script_file, environment = env)
+
+aci_config = AciWebservice.deploy_configuration(cpu_cores = 1,
+                                                memory_gb = 1, 
+                                                enable_app_insights = True,
+                                                auth_enabled = True)
+                                            
+
+aci_service_name = 'automl-webservice1'
+
+```
+
+**Deploy the webservice**
+![deploy](https://user-images.githubusercontent.com/51949018/115211976-b3f16f80-a11d-11eb-8286-a97445eed0b7.png)
+
+It takes few minutes to deploy the webservice and we can see that the webservice url in the above picture 
+
+**Displaying service Token**
+
+
+![service token](https://user-images.githubusercontent.com/51949018/115212363-0cc10800-a11e-11eb-83b0-9b0b1f962303.png)
+
+
+**Dispaly of deployed service in endpoints section**
+![proof](https://user-images.githubusercontent.com/51949018/115212719-70e3cc00-a11e-11eb-9e8a-e650d016ee6a.png)
+
+**Webservice showing it is in healthy state**
+![healthy](https://user-images.githubusercontent.com/51949018/115212831-8d800400-a11e-11eb-88bc-066569284af3.png)
+
+
+**While deploying the service, I have enabled `app_insights = True` which gives valuable information regarding the deployed model**
+![insight1](https://user-images.githubusercontent.com/51949018/115212862-97096c00-a11e-11eb-94f6-3647d6d6fe2c.png)
+
+![insight2](https://user-images.githubusercontent.com/51949018/115212884-9b358980-a11e-11eb-8574-af9685b522bb.png)
+
+Consuming the *RESTAPI*
+![web1-token](https://user-images.githubusercontent.com/51949018/115213719-6d047980-a11f-11eb-9e39-c627a76f9f3b.png)
+
+
+**TEST**
+![test](https://user-images.githubusercontent.com/51949018/115213854-932a1980-a11f-11eb-9d0f-b71531c2d9e5.png)
+![test2](https://user-images.githubusercontent.com/51949018/115213866-958c7380-a11f-11eb-8377-3dfcffbe7000.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
