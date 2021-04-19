@@ -7,7 +7,7 @@
 According to the World Health Organization (WHO) stroke is the 2nd leading cause of death globally, responsible for approximately 11% of total deaths.
 
 
-This dataset is used to predict whether a patient is likely to get stroke based on the input parameters like gender, age, various diseases, and smoking status. Each row in the data provides relavant information about the patient.
+This dataset is used to predict whether a patient is likely to get stroke based on the input parameters like gender, age, various diseases, and smoking status. Each row in the data provides relavant information about the patient. The dataset is from [Kaggle](https://www.kaggle.com/fedesoriano/stroke-prediction-dataset)
 
 #### Task 
 The task, we are going to perform here is find *optimal model* through **HyperDrive** and **AutoML** and deploy that best model for binary classification 
@@ -27,3 +27,28 @@ The task, we are going to perform here is find *optimal model* through **HyperDr
 |bmi             | Body mass index                                    |
 |smoking_status  |smokes,unknown,formerly smoked,never smoke          |
 |stroke          |if the patient had 1 else 0                         |
+
+
+### access for the data 
+```
+found = False
+key = 'strokeDataset'
+description_text = "Prediction of Stroke"
+
+if key in ws.datasets.keys():
+    found = True
+    dataset = ws.datasets[key]
+    
+if not found :
+    example = 'https://raw.githubusercontent.com/123manju900/Capstone-AzureML/main/stroke-prediction-dataset.csv'
+    dataset = Dataset.Tabular.from_delimited_files(example) 
+```
+For accessing the Dataset, we can run this command.I have stored the dataset in my Github repo and accessed it 
+
+For registering the model 
+```
+dataset = dataset.register(workspace = ws,
+                          name = key , 
+                          description = description_text )
+```
+
