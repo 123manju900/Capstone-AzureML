@@ -112,6 +112,83 @@ Other metrics about the best model
 ![fitted model](https://user-images.githubusercontent.com/51949018/115192124-0162e200-a108-11eb-894e-5ea73e25e878.png)
 
 
+## HyperDrive
+For running drive module, I have run HyperDrive  along with **Train.py** file. Since, it is a classification(binary) problem , I have chosen Logistic regression as this runs well with Binary classification 
+
+**Train.py**
+
+In this file I have specified the dataset url which I have stored it on my github and done some featurization. The columns like *Residence_type* , *gender* , *ever_married* , *work_type* were categorical in nature which I have encoded them into mumeric types since logistic regression doesn't support categorical type variables 
+
+### Hyperdriveconfig
+
+**Parameters**
+
+![hyperconfig](https://user-images.githubusercontent.com/51949018/115199321-b7cac500-a110-11eb-89f5-a7f428902d84.png)
+
+`RandomParamtersampling : ` This sampling could could be used for both discrete and continous data 
+
+**parameters I have taken in `RandomParametersampling `**
+  
+  `C:` This indicates the inverse regularisation strength. Regularization to decrease the cost function. Lesser C value indicates stronger regularization strength
+  
+  
+  `max_iter :` This indicates the number of iterations it is going to perform to get better accuracy on the model
+  
+  ### Early termination policy 
+  
+  The policy I have used is *BanditPolicy* 
+  
+  Bandit policy is based on slack factor/slack amount and evaluation interval. Bandit ends runs when the primary metric isn't within the specified slack factor/slack amount of the most successful run.
+  
+  slack factor : It defines the slack allowed with respect to the best performing training run.
+  
+  
+  **SKLearn estimator**
+  Creates an estimator for training in Scikit-learn experiments.
+  
+  The **max_total_runs** I have used here is 30 for better model trianing and **max_concurrent_runs** depending upon the maximum nodes allocated
+  
+  ### RunWidget
+  After passing the required parameters in the HyperDriveConfig , I have submitted the run and here are the screenshots of HyperDriveConfig
+  
+  ![autoMLwidget](https://user-images.githubusercontent.com/51949018/115205593-59edab80-a117-11eb-8d8e-9592a349212b.png)
+  
+  Widget showing successful runs 
+  ![widget2](https://user-images.githubusercontent.com/51949018/115205603-5c500580-a117-11eb-90aa-ff6de98e77ac.png)
+  
+  Screenshot showing the completed status of HyperDrive experiment
+  ![completed status](https://user-images.githubusercontent.com/51949018/115205931-afc25380-a117-11eb-9bc3-8e0cca111964.png)
+  
+  Graphs related to the runs
+  
+  ![graph](https://user-images.githubusercontent.com/51949018/115206550-5870b300-a118-11eb-8493-7792d146f0c2.png)
+  
+  ![childrun](https://user-images.githubusercontent.com/51949018/115206566-5ad30d00-a118-11eb-9ba8-b0bf1482240c.png)
+  
+  **Best_Run**
+  ![bestrun2](https://user-images.githubusercontent.com/51949018/115206728-8524ca80-a118-11eb-9adb-22e253e7ef05.png)
+  
+  ![best run](https://user-images.githubusercontent.com/51949018/115206740-87872480-a118-11eb-81d0-1c4c991465e4.png)
+  Here we can see the accuracy is 0.94 
+  
+  **best_parameters**
+  ![parametric](https://user-images.githubusercontent.com/51949018/115207380-2d3a9380-a119-11eb-95cb-eb57c83e7769.png)
+  
+  here we can see the best parameters for C is 0.89 and max_iter could be 150 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
 
 
 
