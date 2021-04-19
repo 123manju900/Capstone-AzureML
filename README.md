@@ -245,12 +245,30 @@ It takes few minutes to deploy the webservice and we can see that the webservice
 ![insight2](https://user-images.githubusercontent.com/51949018/115212884-9b358980-a11e-11eb-8574-af9685b522bb.png)
 
 Consuming the *RESTAPI*
+
+
+
 ![web1-token](https://user-images.githubusercontent.com/51949018/115213719-6d047980-a11f-11eb-9e39-c627a76f9f3b.png)
 
 
 **TEST**
 ![test](https://user-images.githubusercontent.com/51949018/115213854-932a1980-a11f-11eb-9d0f-b71531c2d9e5.png)
 ![test2](https://user-images.githubusercontent.com/51949018/115213866-958c7380-a11f-11eb-8377-3dfcffbe7000.png)
+
+## Video
+(YouTuBe)[https://youtu.be/EXyehG7VO4M]
+
+## Future Improvements
+ * Enable ONNX conversion and deploy the model
+ * Allow more time to train the data using AutoML for training and check for accuracy 
+ * Using SMOTE on the dataset before HyperDrive and check the metrics
+ * Train on more data and test the model
+ * Deploy the model on IOT azure
+
+
+
+
+
 
 
 
