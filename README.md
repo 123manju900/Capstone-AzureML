@@ -174,7 +174,44 @@ In this file I have specified the dataset url which I have stored it on my githu
   **best_parameters**
   ![parametric](https://user-images.githubusercontent.com/51949018/115207380-2d3a9380-a119-11eb-95cb-eb57c83e7769.png)
   
-  here we can see the best parameters for C is 0.89 and max_iter could be 150 
+  here we can see the best parameters for C is 0.89 and max_iter could be 150 .
+  
+  
+  ## Model deployment 
+  Here one may feel that the HyperDriveConfig has performed better than the AutoML but here is something we need to consider as we look at Regularization factor, it is 0.89 which indicates that the cost function is high for this alogorithm. Meaning although it may have given better accuracy on this dataset but it's going to fail on similar data. The maximum number of iterations indicate that the model is over-fitted. So, to come to conclusion here *VotingEnsemble* is the optimal and best algorithm. Voting Ensemble combines more than one algorithm for prediction and predicts using voting count which it has low-variance to the dataset
+  
+  ## Deploy model##
+  
+  For deploying a model first we register the best model, for **registering the best model** we can run this code
+  ```
+  automodel = best_run.register_model(model_name='automl_model', 
+                                    model_path='outputs/model.pkl',
+                                    tags={'Method':'AutoML'})
+
+print(automodel)
+  
+  ``` 
+  **Once the model is registered, we also need to scoring.py and env.yml files for deployment **
+  
+  
+  *Scoring.py* : This contains all the required configurations for the deployed model 
+  *env.yml* : It contains the environment supporting libraries to run the model 
+  
+  We can download them using the following code
+  ```
+  # Download scoring file 
+best_run.download_file('outputs/scoring_file_v_1_0_0.py', 'score.py')
+
+# Download environment file
+best_run.download_file('outputs/conda_env_v_1_0_0.yml', 'env.yml')
+
+```
+
+
+
+  
+  
+  
   
   
   
