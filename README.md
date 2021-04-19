@@ -83,6 +83,38 @@ The autoML settings are submitted and Runwidgets is run
 Here we can see the screenshot of AutoMl run
 ![automate](https://user-images.githubusercontent.com/51949018/115190497-bc3db080-a105-11eb-81b4-fd889d5e328a.png)
 
+## best model
+The best model I got is VotingEnsemble
+![best algo](https://user-images.githubusercontent.com/51949018/115190961-674e6a00-a106-11eb-8225-20e256e17867.png)
+
+List of other algorithms along with best model 
+
+![best algo 2](https://user-images.githubusercontent.com/51949018/115190982-6cabb480-a106-11eb-94e3-f3abe550dc79.png)
+
+![list of algo](https://user-images.githubusercontent.com/51949018/115191262-d1ffa580-a106-11eb-9af9-72e5010135e5.png)
+
+Parameters of voting ensemble
+
+
+![metric one](https://user-images.githubusercontent.com/51949018/115191619-4e928400-a107-11eb-904d-48a48c5fd068.png)
+
+![metric 2](https://user-images.githubusercontent.com/51949018/115191646-56eabf00-a107-11eb-8f23-84f1a4823f9f.png)
+
+![metric 3](https://user-images.githubusercontent.com/51949018/115191658-5ce0a000-a107-11eb-97ac-6fb9a4c79f87.png)
+
+![metric 4](https://user-images.githubusercontent.com/51949018/115191671-610cbd80-a107-11eb-9c61-b7f0c325fc75.png)
+
+Other metrics about the best model 
+![tag 1](https://user-images.githubusercontent.com/51949018/115192089-f4de8980-a107-11eb-8822-c43c56d0aa52.png)
+
+![tag 2](https://user-images.githubusercontent.com/51949018/115192096-f740e380-a107-11eb-9e2b-ba224da5704d.png)
+
+![fitted model](https://user-images.githubusercontent.com/51949018/115192124-0162e200-a108-11eb-894e-5ea73e25e878.png)
+
+
+
+
+
 
 
 
