@@ -90,6 +90,9 @@ Upload of Dataset
 The autoML settings are submitted and Runwidgets is run 
 ![autoML_widget](https://user-images.githubusercontent.com/51949018/115190110-29047b00-a105-11eb-87f5-cac7d592dcf0.png)
 
+
+Widget showing all the successful runs of AutoML
+
 ![runwidget](https://user-images.githubusercontent.com/51949018/115257725-fdf24980-a14d-11eb-9a38-12cbd866d0de.png)
 
 
