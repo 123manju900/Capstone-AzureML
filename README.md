@@ -314,7 +314,7 @@ The json data that was loaded in the earlier step is sent for inferencing using 
 ![servicedelete](https://user-images.githubusercontent.com/51949018/115216511-31b77a00-a122-11eb-928a-9f0704dc7251.png)
 
 ## Video
-[YouTuBe](https://youtu.be/EXyehG7VO4M)
+[YouTuBe](https://youtu.be/fvhT-9Vf2hA)
 
 ## Future Improvements
  * Enable ONNX conversion and deploy the model
