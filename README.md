@@ -256,7 +256,7 @@ Consuming the *RESTAPI*
 ![test2](https://user-images.githubusercontent.com/51949018/115213866-958c7380-a11f-11eb-8377-3dfcffbe7000.png)
 
 ## Video
-(YouTuBe)[https://youtu.be/EXyehG7VO4M]
+[YouTuBe](https://youtu.be/EXyehG7VO4M)
 
 ## Future Improvements
  * Enable ONNX conversion and deploy the model
