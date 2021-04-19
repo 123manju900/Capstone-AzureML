@@ -9,6 +9,10 @@
 
 First, we need to choose a dataset from external resources , here in my case I have chosen the dataset from *Kaggle* and load the dataset by the code which we wrote in the notebooks and register them. Next, we are going to create two best models from HyperDrive and AutoML : first one with customised parameters and the second which going to be chosen by AutoML and depending upon the optimal parameters and fit with the model, we are going to deploy that best model as a webservice. The webservice can be accessed by using the RESTAPI and consume and test the endpoints
 
+
+## Project set up and installation 
+Since I was using the workspace provided by the Udacity, the workspace environment and compute cluster were are already created for me. One needs azure subscription and credentials into order to access the azure portal 
+
 ## Dataset
 ### OverView
 According to the World Health Organization (WHO) stroke is the 2nd leading cause of death globally, responsible for approximately 11% of total deaths.
@@ -86,6 +90,9 @@ Upload of Dataset
 The autoML settings are submitted and Runwidgets is run 
 ![autoML_widget](https://user-images.githubusercontent.com/51949018/115190110-29047b00-a105-11eb-87f5-cac7d592dcf0.png)
 
+![runwidget](https://user-images.githubusercontent.com/51949018/115257725-fdf24980-a14d-11eb-9a38-12cbd866d0de.png)
+
+
 ### Completion of AutoML run 
 Here we can see the screenshot of AutoMl run
 ![automate](https://user-images.githubusercontent.com/51949018/115190497-bc3db080-a105-11eb-81b4-fd889d5e328a.png)
@@ -100,6 +107,7 @@ List of other algorithms along with best model
 
 ![list of algo](https://user-images.githubusercontent.com/51949018/115191262-d1ffa580-a106-11eb-9af9-72e5010135e5.png)
 
+
 Parameters of voting ensemble
 
 
@@ -110,6 +118,14 @@ Parameters of voting ensemble
 ![metric 3](https://user-images.githubusercontent.com/51949018/115191658-5ce0a000-a107-11eb-97ac-6fb9a4c79f87.png)
 
 ![metric 4](https://user-images.githubusercontent.com/51949018/115191671-610cbd80-a107-11eb-9c61-b7f0c325fc75.png)
+
+Graphs representing accuracy and other metric of voting ensemble
+![graph](https://user-images.githubusercontent.com/51949018/115258488-a86a6c80-a14e-11eb-8e5e-77443808b6d9.png)
+
+Graph showing accuracy of voting ensemble
+
+![graph2](https://user-images.githubusercontent.com/51949018/115258500-ab655d00-a14e-11eb-82d3-127cd65e9d99.png)
+
 
 Other metrics about the best model 
 ![tag 1](https://user-images.githubusercontent.com/51949018/115192089-f4de8980-a107-11eb-8822-c43c56d0aa52.png)
@@ -251,8 +267,10 @@ It takes few minutes to deploy the webservice and we can see that the webservice
 
 ![insight2](https://user-images.githubusercontent.com/51949018/115212884-9b358980-a11e-11eb-8574-af9685b522bb.png)
 
-Consuming the *RESTAPI*
+![key-based](https://user-images.githubusercontent.com/51949018/115257925-2a0dca80-a14e-11eb-8ad8-7400f83fde0e.png)
 
+
+Consuming the *RESTAPI*
 
 
 ![web1-token](https://user-images.githubusercontent.com/51949018/115213719-6d047980-a11f-11eb-9e39-c627a76f9f3b.png)
