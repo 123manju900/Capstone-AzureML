@@ -180,7 +180,7 @@ In this file I have specified the dataset url which I have stored it on my githu
   ## Model deployment 
   Here one may feel that the HyperDriveConfig has performed better than the AutoML but here is something we need to consider as we look at Regularization factor, it is 0.89 which indicates that the cost function is high for this alogorithm. Meaning although it may have given better accuracy on this dataset but it's going to fail on similar data. The maximum number of iterations indicate that the model is over-fitted. So, to come to conclusion here *VotingEnsemble* is the optimal and best algorithm. Voting Ensemble combines more than one algorithm for prediction and predicts using voting count which it has low-variance to the dataset
   
-  ## Deploy model##
+  ## Deploy model
   
   For deploying a model first we register the best model, for **registering the best model** we can run this code
   ```
@@ -191,7 +191,7 @@ In this file I have specified the dataset url which I have stored it on my githu
 print(automodel)
   
   ``` 
-  **Once the model is registered, we also need to scoring.py and env.yml files for deployment **
+  **Once the model is registered, we also need to scoring.py and env.yml files for deployment**
   
   
   *Scoring.py* : This contains all the required configurations for the deployed model 
