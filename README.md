@@ -71,9 +71,18 @@ Upload of Dataset
 
 `label_column_name` : stroke as we are trying to predict a person has suffered from stroke or not
 
-`enable_early_stoppin` : Inorder to avoid unnnecessary usage of compute , it is enabled
+`enable_early_stopping` : Inorder to avoid unnnecessary usage of compute , it is enabled
 
 `featurization`: Here it is set to auto where it will automatically identify the type of featurization according to the data
+
+## AutoML runwidget
+The autoML settings are submitted and Runwidgets is run 
+![autoML_widget](https://user-images.githubusercontent.com/51949018/115190110-29047b00-a105-11eb-87f5-cac7d592dcf0.png)
+
+### Completion of AutoML run 
+Here we can see the screenshot of AutoMl run
+![automate](https://user-images.githubusercontent.com/51949018/115190497-bc3db080-a105-11eb-81b4-fd889d5e328a.png)
+
 
 
 
