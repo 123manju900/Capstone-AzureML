@@ -51,4 +51,36 @@ dataset = dataset.register(workspace = ws,
                           name = key , 
                           description = description_text )
 ```
+Upload of Dataset 
+![datasets](https://user-images.githubusercontent.com/51949018/115184858-50a31580-a0fc-11eb-8383-9077df31559d.png)
+
+### list of all Experiments
+![all experiments](https://user-images.githubusercontent.com/51949018/115185011-a081dc80-a0fc-11eb-8f33-12ffc2dc293f.png)
+`hd-experiment` is the experiment submitted by HyperDrive and `Auto-stoke` is the experiment submitted by AutoML
+
+## AutoML
+### AutoML settings
+![automlconfig](https://user-images.githubusercontent.com/51949018/115185377-577e5800-a0fd-11eb-8233-dd523106f0a6.png)
+`experiment_timeout_minutes`: Here I have given 30 mins of time to run all the algorithms
+
+`max_concurrent_iterations` : Given according to the max nodes allocated to compute
+
+`n_cross_validations`: Number of splits of Data to be split while training the model
+
+`classification` : Here are performing binary classification
+
+`label_column_name` : stroke as we are trying to predict a person has suffered from stroke or not
+
+`enable_early_stoppin` : Inorder to avoid unnnecessary usage of compute , it is enabled
+
+`featurization`: Here it is set to auto where it will automatically identify the type of featurization according to the data
+
+
+
+
+
+
+
+
+
 
