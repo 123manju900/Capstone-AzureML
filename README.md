@@ -1,6 +1,13 @@
 # Capstone-AzureML
+ Udacity-Final project
+ 
+ Here we are going to do binary classification on Stroke Prediction dataset. Here our goal is to train the dataset, find the best model and deploy it as a webservice and inference with the endpoints
+ 
+
 ## OverView
 ![overview](https://user-images.githubusercontent.com/51949018/115182812-3f580a00-a0f8-11eb-9662-c5debd425452.png)
+
+First, we need to choose a dataset from external resources , here in my case I have chosen the dataset from *Kaggle* and load the dataset by the code which we wrote in the notebooks and register them. Next, we are going to create two best models from HyperDrive and AutoML : first one with customised parameters and the second which going to be chosen by AutoML and depending upon the optimal parameters and fit with the model, we are going to deploy that best model as a webservice. The webservice can be accessed by using the RESTAPI and consume and test the endpoints
 
 ## Dataset
 ### OverView
@@ -10,7 +17,7 @@ According to the World Health Organization (WHO) stroke is the 2nd leading cause
 This dataset is used to predict whether a patient is likely to get stroke based on the input parameters like gender, age, various diseases, and smoking status. Each row in the data provides relavant information about the patient. The dataset is from [Kaggle](https://www.kaggle.com/fedesoriano/stroke-prediction-dataset)
 
 #### Task 
-The task, we are going to perform here is find *optimal model* through **HyperDrive** and **AutoML** and deploy that best model for binary classification 
+The task, we are going to perform here is find *optimal model* through **HyperDrive** and **AutoML** and deploy that best model for binary classification and consume the endpoints
 
 #### Attributes of the Dataset are                                             
 | Attributes     | Labels                                             |
@@ -254,6 +261,32 @@ Consuming the *RESTAPI*
 **TEST**
 
 ![test](https://user-images.githubusercontent.com/51949018/115213854-932a1980-a11f-11eb-9d0f-b71531c2d9e5.png)
+
+For sending an infernce request and test the model, we can run the following code 
+
+```
+import requests
+headers = {'Content-type': 'application/json'}
+
+headers['Authorization'] = f'Bearer {key}'
+
+
+response = requests.post(service.scoring_uri,sample_json, headers = headers )
+
+# for viewing the results 
+
+print(response.text ) 
+```
+The json data that was loaded in the earlier step is sent for inferencing using the requests library, since I have enabled key-based authentication I'm first going to provide the primary key for authentication and query the endpoint with the sample input
+
+*and got the input as follows*
+![responce](https://user-images.githubusercontent.com/51949018/115256273-b4edc580-a14c-11eb-96c0-3719cb317731.png)
+
+
+
+
+
+
 
 
 ![test2](https://user-images.githubusercontent.com/51949018/115213866-958c7380-a11f-11eb-8377-3dfcffbe7000.png)
